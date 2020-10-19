@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>meetup</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>meetup-graphql-impl</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.4.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-starter-graphql.version>5.0.2</spring-starter-graphql.version>
+        <graphql-java-tools.version>5.2.4</graphql-java-tools.version>
+        <spring-boot-starter.version>2.3.4.RELEASE</spring-boot-starter.version>
+        <h2.version>1.4.200</h2.version>
+        <lombok.version>1.18.16</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-spring-boot-starter</artifactId>
+                <version>${spring-starter-graphql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java-tools</artifactId>
+                <version>${graphql-java-tools.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.graphql-java/graphiql-spring-boot-starter -->
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphiql-spring-boot-starter</artifactId>
+                <version>${spring-starter-graphql.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot-starter.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
