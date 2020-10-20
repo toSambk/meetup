@@ -1,0 +1,8 @@
+query {
+  vehicles(count: 1) 
+  {
+    id, 
+    type, 
+    modelCode
+}
+}

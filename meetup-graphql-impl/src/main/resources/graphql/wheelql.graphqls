@@ -1,0 +1,16 @@
+type Wheel {
+    id: ID!
+    isForWinter: Boolean!
+    maker: String
+    vehicle: Vehicle
+}
+
+extend type Query {
+    findAllWheels: [Wheel]!
+    countWheels: Int!
+}
+
+extend type Mutation {
+    createWheel(isForWinter: Boolean!, maker: String!, vehicle: ID!) : Wheel!
+    deleteWheel(id: ID!) : Boolean
+}

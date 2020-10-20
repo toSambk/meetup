@@ -1,0 +1,9 @@
+mutation {
+  createWheel(isForWinter: true, maker: "Goodrich", vehicle: 1) {
+    id,
+    vehicle {
+      id,
+      modelCode
+    }
+  }
+}

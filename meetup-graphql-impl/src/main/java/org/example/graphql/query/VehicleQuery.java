@@ -12,8 +12,12 @@ import java.util.Optional;
 @Component
 public class VehicleQuery implements GraphQLQueryResolver {
 
+    private final VehicleService vehicleService;
+
     @Autowired
-    private VehicleService vehicleService;
+    public VehicleQuery(VehicleService vehicleService) {
+        this.vehicleService = vehicleService;
+    }
 
     public List<Vehicle> getVehicles(final int count) {
         return this.vehicleService.getAllVehicles(count);

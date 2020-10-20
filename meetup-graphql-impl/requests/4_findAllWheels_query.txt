@@ -1,0 +1,10 @@
+query {
+  findAllWheels {
+    id,
+    isForWinter,
+    vehicle {
+      modelCode,
+      type
+    }
+  }
+}
