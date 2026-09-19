@@ -1,6 +1,6 @@
-# meetup
+# graphql-soap-rest-meetup
 
-`meetup` is a small multi-module Java project prepared for a meetup about `REST vs SOAP vs GraphQL`.
+`graphql-soap-rest-meetup` is a small multi-module Java project prepared for a meetup about `REST vs SOAP vs GraphQL`.
 
 ## Modules
 
